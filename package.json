@@ -26,6 +26,9 @@
   "repository": "https://github.com/jackspiva/react-native-hold-menu",
   "author": "Jack Spiva",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "bugs": {
     "url": "https://github.com/jackspiva/react-native-hold-menu/issues"
   },

@@ -5,6 +5,7 @@ import { nanoid } from 'nanoid/non-secure';
 import {
   LongPressGestureHandler,
   LongPressGestureHandlerGestureEvent,
+  TapGestureHandler,
 } from 'react-native-gesture-handler';
 import Animated, {
   measure,
@@ -163,9 +164,9 @@ const HoldItemComponent = ({
         itemScale.value = withTiming(
           HOLD_ITEM_SCALE_DOWN_VALUE,
           { duration: HOLD_ITEM_SCALE_DOWN_DURATION },
-          isFinised => {
+          () => {
             const isListValid = items && items.length > 0;
-            if (isFinised && isListValid) {
+            if (isListValid) {
               state.value = CONTEXT_MENU_STATE.ACTIVE;
               isActive.value = true;
               scaleBack();
@@ -254,14 +255,14 @@ const HoldItemComponent = ({
 
   return (
     <>
-      <LongPressGestureHandler
-        minDurationMs={150}
+      <TapGestureHandler
+        // minDurationMs={150}
         onHandlerStateChange={longPressGestureEvent}
       >
         <Animated.View ref={containerRef} style={containerStyle}>
           {children}
         </Animated.View>
-      </LongPressGestureHandler>
+      </TapGestureHandler>
 
       <Portal key={key} name={key}>
         <Animated.View

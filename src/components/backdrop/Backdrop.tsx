@@ -36,7 +36,11 @@ type Context = {
   };
 };
 
-const BackdropComponent = () => {
+const BackdropComponent = ({
+  blurEnabled = true,
+}: {
+  blurEnabled: boolean;
+}) => {
   const { state, theme } = useInternal();
 
   const tapGestureEvent = useAnimatedGestureHandler<
@@ -102,19 +106,35 @@ const BackdropComponent = () => {
       onGestureEvent={tapGestureEvent}
       onHandlerStateChange={tapGestureEvent}
     >
-      <AnimatedBlurView
-        // @ts-ignore
-        intensity={100}
-        tint="default"
-        style={[styles.container, animatedContainerStyle]}
-      >
-        <Animated.View
-          style={[
-            { ...StyleSheet.absoluteFillObject },
-            animatedInnerContainerStyle,
-          ]}
-        />
-      </AnimatedBlurView>
+      {blurEnabled ? (
+        <AnimatedBlurView
+          // @ts-ignore
+          intensity={100}
+          tint="default"
+          style={[styles.container, animatedContainerStyle]}
+        >
+          <Animated.View
+            style={[
+              { ...StyleSheet.absoluteFillObject },
+              animatedInnerContainerStyle,
+            ]}
+          />
+        </AnimatedBlurView>
+      ) : (
+        <AnimatedBlurView
+          // @ts-ignore
+          intensity={0}
+          tint="default"
+          style={[styles.container, animatedContainerStyle]}
+        >
+          <Animated.View
+            style={[
+              { ...StyleSheet.absoluteFillObject },
+              animatedInnerContainerStyle,
+            ]}
+          />
+        </AnimatedBlurView>
+      )}
     </TapGestureHandler>
   );
 };

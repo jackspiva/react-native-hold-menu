@@ -4,6 +4,7 @@ export type MenuItemProps = {
   text: string;
   icon?: () => React.ReactNode;
   onPress: () => void;
+  onLongPress?: () => void;
   isTitle?: boolean;
   isDestructive?: boolean;
   withSeperator?: boolean;

@@ -69,7 +69,7 @@ const App = () => {
         <StatusBar
           barStyle={state.theme === 'light' ? 'dark-content' : 'light-content'}
         />
-        <HoldMenuProvider theme={state.theme}>
+        <HoldMenuProvider theme={state.theme} blur={false}>
           <NavigationContainer>
             <Stack.Navigator
               initialRouteName="Home"

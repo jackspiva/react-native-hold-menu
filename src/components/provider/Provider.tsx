@@ -19,6 +19,7 @@ export interface Store {
 
 const ProviderComponent = ({
   children,
+  blur = true,
   theme: selectedTheme,
 }: HoldMenuProviderProps) => {
   const state = useSharedValue<CONTEXT_MENU_STATE>(
@@ -54,7 +55,7 @@ const ProviderComponent = ({
     <InternalContext.Provider value={internalContextVariables}>
       <PortalProvider>
         {children}
-        <Backdrop />
+        <Backdrop blurEnabled={blur} />
         <Menu />
       </PortalProvider>
     </InternalContext.Provider>

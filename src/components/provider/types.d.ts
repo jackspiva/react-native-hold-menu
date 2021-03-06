@@ -7,5 +7,6 @@ export interface HoldMenuProviderProps {
    * theme="light"
    */
   theme?: 'dark' | 'light';
+  blur?: boolean;
   children: React.ReactElement | React.ReactElement[];
 }

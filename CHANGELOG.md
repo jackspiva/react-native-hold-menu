@@ -1,14 +1,13 @@
 # Changelog
 
-## [v0.0.9](https://github.com/jackspiva/react-native-hold-menu/compare/v0.0.8...v0.0.9)
+## [v0.0.10](https://github.com/jackspiva/react-native-hold-menu/compare/v0.0.9...v0.0.10)
+
+## [v0.0.9](https://github.com/jackspiva/react-native-hold-menu/compare/v0.0.8...v0.0.9) - 2021-03-05
 
 #### Improvements
 
 - chore: update issue templates ([1c88f06](https://github.com/jackspiva/react-native-hold-menu/commit/1c88f06203a9659dad138779b0eee0da7593abb5)).
-
-#### Documentations
-
-- docs: add preview video and update example doc ([fb10a48](https://github.com/jackspiva/react-native-hold-menu/commit/fb10a487be6421d6cd3e711fab840d916d873660)).
+- chore: release v0.0.9 ([ff33cfe](https://github.com/jackspiva/react-native-hold-menu/commit/ff33cfe59ad16a4b6ea646f952367512668eeca0)).
 
 ## [v0.0.8](https://github.com/jackspiva/react-native-hold-menu/compare/v0.0.7...v0.0.8) - 2021-03-05
 
